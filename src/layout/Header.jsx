@@ -1,5 +1,7 @@
 export const Header = () => {
 	return (
-		<header>Header</header>
+		<header>
+			Pick restaurant and order food
+		</header>
 	);
 };

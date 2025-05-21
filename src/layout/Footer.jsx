@@ -1,5 +1,7 @@
 export const Footer = () => {
   return (
-		<footer>Footer</footer>
+		<footer>
+			@2025
+		</footer>
 	);
 };

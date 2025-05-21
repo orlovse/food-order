@@ -1,3 +1,5 @@
+import { MenuItem } from './MenuItem';
+
 export const Restaurant = ({ restaurant = {} }) => {
 	const { name, menu, reviews } = restaurant;
 	
@@ -12,9 +14,7 @@ export const Restaurant = ({ restaurant = {} }) => {
 				
 				<ul>
 					{menu.map(({ id, name }) => (
-						<li key={id}>
-							{name}
-						</li>
+						<MenuItem key={id} name={name}/>
 					))}
 				</ul>
 			</div>
@@ -24,7 +24,7 @@ export const Restaurant = ({ restaurant = {} }) => {
 				
 				<ul>
 					{reviews.map(({ id, text }) => (
-						<li key={id}>
+						<li key={id} className="review-item">
 							{text}
 						</li>
 					))}

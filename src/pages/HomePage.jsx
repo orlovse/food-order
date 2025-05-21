@@ -1,6 +1,6 @@
 import { Restaurant } from '../components/Restaurant';
-import { TabNavigation } from '../layout/TabNavigation';
 import { useRestaurants } from '../hooks/useRestaurants';
+import { TabNavigation } from '../layout/TabNavigation';
 
 export const HomePage = () => {
 	const { restaurants, selectedRestaurant, setSelectedRestaurantId } = useRestaurants();
