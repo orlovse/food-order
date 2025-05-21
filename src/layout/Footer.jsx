@@ -1,7 +1,3 @@
 export const Footer = () => {
-  return (
-		<footer>
-			@2025
-		</footer>
-	);
+  return <footer>@2025</footer>;
 };

@@ -9,7 +9,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body, h1, h2, h3, h4, h5, h6, p {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -41,9 +48,9 @@ ul {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    'header'
+    'main'
+    'footer';
   height: 100vh;
   margin: 0;
 }
@@ -57,7 +64,7 @@ header {
 main {
   grid-area: main;
   overflow: auto;
-  padding: 12px
+  padding: 12px;
 }
 
 footer {

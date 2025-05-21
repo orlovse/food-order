@@ -2,15 +2,13 @@ import { Footer } from './Footer';
 import { Header } from './Header';
 
 export const Layout = ({ children }) => {
-	return (
-		<div className="layout">
-			<Header/>
+  return (
+    <div className="layout">
+      <Header />
 
-			<main>
-				{children}
-			</main>
+      <main>{children}</main>
 
-			<Footer/>
-		</div>
-	);
+      <Footer />
+    </div>
+  );
 };
