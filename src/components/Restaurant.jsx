@@ -1,4 +1,5 @@
 import { MenuItem } from './MenuItem';
+import { ReviewForm } from './ReviewForm';
 import { Reviews } from './Reviews';
 
 export const Restaurant = ({ restaurant = {} }) => {
@@ -19,6 +20,10 @@ export const Restaurant = ({ restaurant = {} }) => {
       </div>
 
       {reviews.length ? <Reviews reviews={reviews} /> : null }
+
+      <h3>Your review</h3>
+      
+      <ReviewForm/>
     </div>
   );
 };
