@@ -39,7 +39,10 @@ export const ReviewForm = () => {
         onChange={(event) => onTextChange(event.target.value)}/>
 
       <p>Rating:</p>
-      <Counter count={rating} setCount={onRatingChange} />
+      <Counter 
+        count={rating} 
+        setCount={onRatingChange} 
+      />
 
       <button onClick={onClear}>
         Clear
