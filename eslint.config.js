@@ -36,6 +36,7 @@ export default [
       ],
       'semi': ['error', 'always'],
       'quotes': ['error', 'single'],
+      'react/prop-types': 0
     },
   },
 ];

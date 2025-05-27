@@ -1,4 +1,6 @@
 import { MenuItem } from './MenuItem';
+import { ReviewForm } from './ReviewForm';
+import { Reviews } from './Reviews';
 
 export const Restaurant = ({ restaurant = {} }) => {
   const { name, menu, reviews } = restaurant;
@@ -17,17 +19,11 @@ export const Restaurant = ({ restaurant = {} }) => {
         </ul>
       </div>
 
-      <div>
-        <h3>Reviews</h3>
+      {reviews.length ? <Reviews reviews={reviews} /> : null }
 
-        <ul>
-          {reviews.map(({ id, text }) => (
-            <li key={id} className="review-item">
-              {text}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <h3>Your review</h3>
+      
+      <ReviewForm/>
     </div>
   );
 };

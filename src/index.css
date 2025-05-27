@@ -101,11 +101,17 @@ footer {
   padding: 8px;
 }
 
-.menu-item__actions {
+.counter {
   display: flex;
   gap: 8px;
 }
 
 .review-item {
   padding: 8px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
