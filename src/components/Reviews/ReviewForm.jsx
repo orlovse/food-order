@@ -1,5 +1,6 @@
 import { Counter } from '@components/Counter/Counter';
 import { useReviewForm } from '@hooks/useReviewForm';
+import styles from './Reviews.module.css';
 
 
 export const ReviewForm = () => {
@@ -20,7 +21,7 @@ export const ReviewForm = () => {
 
   return (
     <form 
-      className="review-form"
+      className={styles.form}
       onSubmit={onSubmit}>
       <label htmlFor="review-name">
         Your name

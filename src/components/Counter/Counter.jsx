@@ -1,6 +1,8 @@
+import styles from './Counter.module.css';
+
 export const Counter = ({ count, setCount }) => {
   return (
-    <div className="counter">
+    <div className={styles.container}>
       <button onClick={() => setCount(count - 1)}>
         -
       </button>
