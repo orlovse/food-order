@@ -1,6 +1,6 @@
-import { MenuItem } from './MenuItem';
-import { ReviewForm } from './ReviewForm';
-import { Reviews } from './Reviews';
+import { MenuItem } from '@components/MenuItem/MenuItem';
+import { ReviewForm } from '@components/Reviews/ReviewForm';
+import { Reviews } from '@components/Reviews/Reviews';
 
 export const Restaurant = ({ restaurant = {} }) => {
   const { name, menu, reviews } = restaurant;

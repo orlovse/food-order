@@ -1,13 +1,14 @@
-import { Restaurant } from '../components/Restaurant';
-import { useRestaurants } from '../hooks/useRestaurants';
-import { TabNavigation } from '../layout/TabNavigation';
+import { Restaurant } from '@components/Restaurant/Restaurant';
+import { useRestaurants } from '@hooks/useRestaurants';
+import { TabNavigation } from '@layout/TabNavigation/TabNavigation';
+import styles from './HomePage.module.css';
 
 export const HomePage = () => {
   const { restaurants, selectedRestaurant, setSelectedRestaurantId } =
     useRestaurants();
 
   return (
-    <div className="home-page">
+    <div className={styles.container}>
       <TabNavigation
         tabs={restaurants}
         selectedId={selectedRestaurant.id}

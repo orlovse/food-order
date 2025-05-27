@@ -1,5 +1,5 @@
-import { Counter } from './Counter';
-import { useCounter } from '../hooks/useCounter';
+import { Counter } from '@components/Counter/Counter';
+import { useCounter } from '@hooks/useCounter';
 
 
 export const MenuItem = ({ name }) => {

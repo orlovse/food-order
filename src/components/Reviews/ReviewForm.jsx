@@ -1,5 +1,5 @@
-import { useReviewForm } from '../hooks/useReviewForm';
-import { Counter } from './Counter';
+import { Counter } from '@components/Counter/Counter';
+import { useReviewForm } from '@hooks/useReviewForm';
 
 
 export const ReviewForm = () => {
