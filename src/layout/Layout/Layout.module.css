@@ -8,3 +8,9 @@
   height: 100vh;
   margin: 0;
 }
+
+.main {
+  grid-area: main;
+  overflow: auto;
+  padding: 12px;
+}

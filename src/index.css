@@ -1,18 +1,29 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-primary-start: #ff7e5f;
+  --color-primary-end:   #feb47b;
+  --text-color:          #333;
+  --bg-light:            #fafafa;
+  --radius:              12px;
+  --spacing:             16px;
+  --shadow:              0 4px 12px rgba(0,0,0,0.06);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-color);
+  line-height: 1.5;
 }
 
 button {
@@ -45,16 +56,4 @@ ul, ol {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-main {
-  grid-area: main;
-  overflow: auto;
-  padding: 12px;
-}
-
-footer {
-  grid-area: footer;
-  padding: 12px;
-  border: 1px solid black;
 }

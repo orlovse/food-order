@@ -10,10 +10,12 @@ export const Layout = ({ children }) => {
 
   return (
     <div className={styles.layout}>
-      <Header />
+      <Header/>
       <ProgressBar target={mainRef}/>
 
-      <main ref={mainRef}>{children}</main>
+      <main ref={mainRef} className={styles.main}>
+        {children}
+      </main>
 
       <Footer />
     </div>

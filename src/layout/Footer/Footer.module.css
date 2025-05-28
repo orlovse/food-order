@@ -1,5 +1,7 @@
 .footer {
   grid-area: footer;
-  padding: 12px;
-  border: 1px solid black;
+  text-align: center;
+  padding: var(--spacing);
+  background: linear-gradient(90deg, var(--color-primary-start), var(--color-primary-end));
+  color: white;
 }

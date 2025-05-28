@@ -1,9 +1,47 @@
 .item {
+  font-size: 14px;
   padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-primary-end)
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.nameInput {
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-primary-end);
+}
+
+.reviewTextarea {
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-primary-end);
+}
+
+.clearButton {
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-primary-end);
+}
+
+.submitButton {
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  background: linear-gradient(90deg, var(--color-primary-start), var(--color-primary-end));
+  color: white;
 }

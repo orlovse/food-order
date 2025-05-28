@@ -10,7 +10,7 @@ export const Restaurant = ({ restaurant = {} }) => {
     <div className={styles.container}>
       <h2>{name}</h2>
 
-      <div>
+      <div className={styles.menu}>
         <h3>Menu</h3>
 
         <ul>
@@ -22,9 +22,11 @@ export const Restaurant = ({ restaurant = {} }) => {
 
       {reviews.length ? <Reviews reviews={reviews} /> : null }
 
-      <h3>Your review</h3>
-      
-      <ReviewForm/>
+      <div>
+        <h3>Your review</h3>
+        
+        <ReviewForm/>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,10 @@
 .header {
 	grid-area: header;
 	padding: 12px;
-	border: 1px solid black;
+  background: linear-gradient(90deg, var(--color-primary-start), var(--color-primary-end));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+  color: white;
 }

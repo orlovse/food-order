@@ -5,10 +5,16 @@ export const Reviews = ({ reviews }) => {
     <div>
       <h3>Reviews</h3>
 
-      <ul>
-        {reviews.map(({ id, text }) => (
+      <ul className={styles.list}>
+        {reviews.map(({ id, text, user, rating }) => (
           <li key={id} className={styles.item}>
-            {text}
+            <span>
+              {text}
+            </span>
+           
+            <b>
+              {user}, Rating: {rating}
+            </b>
           </li>
         ))}
       </ul>
