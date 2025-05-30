@@ -1,15 +1,16 @@
-import { MenuItem } from './MenuItem';
-import { ReviewForm } from './ReviewForm';
-import { Reviews } from './Reviews';
+import { MenuItem } from '@components/MenuItem/MenuItem';
+import { ReviewForm } from '@components/Reviews/ReviewForm';
+import { Reviews } from '@components/Reviews/Reviews';
+import styles from './Restaurant.module.css';
 
 export const Restaurant = ({ restaurant = {} }) => {
   const { name, menu, reviews } = restaurant;
 
   return (
-    <div className="restaurant-card">
+    <div className={styles.container}>
       <h2>{name}</h2>
 
-      <div>
+      <div className={styles.menu}>
         <h3>Menu</h3>
 
         <ul>
@@ -21,9 +22,11 @@ export const Restaurant = ({ restaurant = {} }) => {
 
       {reviews.length ? <Reviews reviews={reviews} /> : null }
 
-      <h3>Your review</h3>
-      
-      <ReviewForm/>
+      <div>
+        <h3>Your review</h3>
+        
+        <ReviewForm/>
+      </div>
     </div>
   );
 };

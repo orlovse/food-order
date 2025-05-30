@@ -1,0 +1,7 @@
+.footer {
+  grid-area: footer;
+  text-align: center;
+  padding: var(--spacing);
+  background: linear-gradient(90deg, var(--color-primary-start), var(--color-primary-end));
+  color: white;
+}

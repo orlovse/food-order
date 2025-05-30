@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+}
+
+.button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 8px);
+  height: 4px;
+  background: linear-gradient(135deg, var(--color-accent-start), var(--color-accent-end));
+  border-radius: 2px;
+}
+
+.selected {
+  border-bottom: 1px solid black;
+}

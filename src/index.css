@@ -1,12 +1,44 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-primary-start: #ff7e5f;
+  --color-primary-end:   #feb47b;
+  --text-color:          #333;
+  --bg-light:            #fafafa;
+  --radius:              12px;
+  --spacing:             16px;
+  --shadow:              0 4px 12px rgba(0,0,0,0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 body,
@@ -20,98 +52,8 @@ p {
   margin: 0;
 }
 
-ul {
+ul, ol {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.restaurant-card {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 24px;
-  border-radius: 8px;
-  border: 1px solid black;
-  max-width: 800px;
-  min-width: 400px;
-  align-self: center;
-}
-
-.restaurants-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.layout {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-    'header'
-    'main'
-    'footer';
-  height: 100vh;
-  margin: 0;
-}
-
-header {
-  grid-area: header;
-  padding: 12px;
-  border: 1px solid black;
-}
-
-main {
-  grid-area: main;
-  overflow: auto;
-  padding: 12px;
-}
-
-footer {
-  grid-area: footer;
-  padding: 12px;
-  border: 1px solid black;
-}
-
-.home-page {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.tab-navigation__tabs-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 24px;
-}
-
-.tab-navigation__tab {
-  cursor: pointer;
-}
-
-.tab-navigation__tab.m_selected {
-  border-bottom: 1px solid black;
-}
-
-.menu-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px;
-}
-
-.counter {
-  display: flex;
-  gap: 8px;
-}
-
-.review-item {
-  padding: 8px;
-}
-
-.review-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
 }

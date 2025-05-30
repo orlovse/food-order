@@ -1,5 +1,6 @@
-import { useReviewForm } from '../hooks/useReviewForm';
-import { Counter } from './Counter';
+import { Counter } from '@components/Counter/Counter';
+import { useReviewForm } from '@hooks/useReviewForm';
+import styles from './Reviews.module.css';
 
 
 export const ReviewForm = () => {
@@ -20,13 +21,14 @@ export const ReviewForm = () => {
 
   return (
     <form 
-      className="review-form"
+      className={styles.form}
       onSubmit={onSubmit}>
       <label htmlFor="review-name">
         Your name
       </label>
       <input
         id="review-name"
+        className={styles.nameInput}
         value={name}
         onChange={(event) => onNameChange(event.target.value)}/>
 
@@ -35,6 +37,7 @@ export const ReviewForm = () => {
       </label>
       <textarea 
         id="review-text"
+        className={styles.reviewTextarea}
         value={text}
         onChange={(event) => onTextChange(event.target.value)}/>
 
@@ -44,11 +47,13 @@ export const ReviewForm = () => {
         setCount={onRatingChange} 
       />
 
-      <button onClick={onClear}>
+      <button
+        className={styles.clearButton}
+        onClick={onClear}>
         Clear
       </button>
 
-      <button>
+      <button className={styles.submitButton}>
         Submit
       </button>
     </form>
