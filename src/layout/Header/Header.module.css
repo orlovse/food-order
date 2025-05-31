@@ -8,3 +8,8 @@
   box-shadow: var(--shadow);
   color: white;
 }
+
+.buttons {
+  display: flex;
+  gap: var(--spacing);
+}

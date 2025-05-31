@@ -6,7 +6,7 @@
   max-width: 800px;
   min-width: 400px;
   align-self: center;
-  background: white;
+  background: #ecd2ff17;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
