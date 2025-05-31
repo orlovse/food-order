@@ -7,7 +7,7 @@
   --color-primary-start: #ff7e5f;
   --color-primary-end:   #feb47b;
   --text-color:          #333;
-  --bg-light:            #fafafa;
+  --color-bg:            #fafafa;
   --radius:              12px;
   --spacing:             16px;
   --shadow:              0 4px 12px rgba(0,0,0,0.06);
@@ -21,9 +21,12 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--bg-light);
-  color: var(--text-color);
   line-height: 1.5;
+}
+
+input, textarea {
+  background: transparent;
+  color: var(--text-color);
 }
 
 button {
