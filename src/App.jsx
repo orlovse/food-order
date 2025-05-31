@@ -1,10 +1,13 @@
 import { Layout } from '@layout/Layout/Layout';
 import { HomePage } from '@pages/HomePage/HomePage';
+import { AuthContextProvider } from './context/Auth/AuthContextProvider';
 
 export const App = () => {
   return (
-    <Layout>
-      <HomePage />
-    </Layout>
+    <AuthContextProvider>
+      <Layout>
+        <HomePage />
+      </Layout>
+    </AuthContextProvider>
   );
 };
