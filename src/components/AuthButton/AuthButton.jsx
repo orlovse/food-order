@@ -4,7 +4,7 @@ import { AuthContext } from '../../context/Auth';
 export const AuthButton = () => {
   const { 
     currentUser, 
-    setUser,
+    login,
     logout,
     isAuthorized 
   } = useContext(AuthContext);
@@ -13,7 +13,7 @@ export const AuthButton = () => {
     if (isAuthorized) {
       logout();
     } else {
-      setUser({name: 'Sergei'});
+      login();
     }
   };
 

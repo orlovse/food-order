@@ -1,16 +1,16 @@
 import { Layout } from '@layout/Layout/Layout';
 import { HomePage } from '@pages/HomePage/HomePage';
 import { AuthContextProvider } from './context/Auth/AuthContextProvider';
-import { TheneContextProvider } from './context/Theme/ThemeContextProvider';
+import { ThemeContextProvider } from './context/Theme/ThemeContextProvider';
 
 export const App = () => {
   return (
     <AuthContextProvider>
-      <TheneContextProvider>
+      <ThemeContextProvider>
         <Layout>
           <HomePage/>
         </Layout>
-      </TheneContextProvider>
+      </ThemeContextProvider>
     </AuthContextProvider>
   );
 };

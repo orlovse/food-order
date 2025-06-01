@@ -8,11 +8,15 @@ export const AuthContextProvider = ({ children }) => {
     setUser(null);
   };
 
+  const login = () => {
+    setUser({name: 'Sergei'});
+  };
+
   return (
     <AuthContext value={{
       currentUser, 
       isAuthorized: Boolean(currentUser),
-      setUser,
+      login,
       logout
     }}>
       {children}
