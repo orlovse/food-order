@@ -9,13 +9,7 @@ export const AuthButton = () => {
     isAuthorized 
   } = useContext(AuthContext);
 
-  const handleAuth = () => {
-    if (isAuthorized) {
-      logout();
-    } else {
-      login();
-    }
-  };
+  const handleAuth = isAuthorized ? logout : login;
 
   return (
     <button onClick={handleAuth}>
