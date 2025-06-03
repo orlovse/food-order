@@ -7,6 +7,15 @@
     'footer';
   height: 100vh;
   margin: 0;
+  background: var(--color-bg);
+  color: var(--text-color);
+}
+
+.layoutDark {
+  --text-color:#E0E0E0;
+  --color-bg:#1A1A2E; 
+  --color-primary-start: #1b1b1b;
+  --color-primary-end: #624c46;
 }
 
 .main {

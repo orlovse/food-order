@@ -2,9 +2,12 @@ import { MenuItem } from '@components/MenuItem/MenuItem';
 import { ReviewForm } from '@components/Reviews/ReviewForm';
 import { Reviews } from '@components/Reviews/Reviews';
 import styles from './Restaurant.module.css';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/Auth';
 
 export const Restaurant = ({ restaurant = {} }) => {
   const { name, menu, reviews } = restaurant;
+  const { isAuthorized } = useContext(AuthContext);
 
   return (
     <div className={styles.container}>
@@ -22,11 +25,14 @@ export const Restaurant = ({ restaurant = {} }) => {
 
       {reviews.length ? <Reviews reviews={reviews} /> : null }
 
-      <div>
-        <h3>Your review</h3>
-        
-        <ReviewForm/>
-      </div>
-    </div>
+      {isAuthorized && (
+        <div>
+          <h3>Your review</h3>
+          
+          <ReviewForm/>
+        </div>
+      )}
+
+     </div>
   );
 };
