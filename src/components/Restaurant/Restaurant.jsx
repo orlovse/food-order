@@ -1,27 +1,22 @@
-import { MenuItem } from '@components/MenuItem/MenuItem';
+import { useContext } from 'react';
+import { useSelector } from 'react-redux';
+import { Menu } from '@components/MenuItem/Menu';
 import { ReviewForm } from '@components/Reviews/ReviewForm';
 import { Reviews } from '@components/Reviews/Reviews';
-import styles from './Restaurant.module.css';
-import { useContext } from 'react';
 import { AuthContext } from '../../context/Auth';
+import { selectRestaurantById } from '@store/Restaurants/restaurantsSlice';
+import styles from './Restaurant.module.css';
 
-export const Restaurant = ({ restaurant = {} }) => {
-  const { name, menu, reviews } = restaurant;
+export const Restaurant = ({ id }) => {
   const { isAuthorized } = useContext(AuthContext);
+  
+  const { name, menu, reviews } = useSelector((state) => selectRestaurantById(state, id));
 
   return (
     <div className={styles.container}>
       <h2>{name}</h2>
 
-      <div className={styles.menu}>
-        <h3>Menu</h3>
-
-        <ul>
-          {menu.map(({ id, name }) => (
-            <MenuItem key={id} name={name} />
-          ))}
-        </ul>
-      </div>
+      <Menu menu={menu}/>
 
       {reviews.length ? <Reviews reviews={reviews} /> : null }
 

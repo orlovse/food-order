@@ -1,3 +1,4 @@
+import { Review } from './Review';
 import styles from './Reviews.module.css';
 
 export const Reviews = ({ reviews }) => {
@@ -6,16 +7,8 @@ export const Reviews = ({ reviews }) => {
       <h3>Reviews</h3>
 
       <ul className={styles.list}>
-        {reviews.map(({ id, text, user, rating }) => (
-          <li key={id} className={styles.item}>
-            <span>
-              {text}
-            </span>
-           
-            <b>
-              {user}, Rating: {rating}
-            </b>
-          </li>
+        {reviews.map((id) => (
+          <Review key={id} id={id}/>
         ))}
       </ul>
     </div>

@@ -4,12 +4,12 @@ import styles from './TabNavigation.module.css';
 export const TabNavigation = ({ tabs = [], selectedId, setActiveId }) => {
   return (
     <nav className={styles.container}>
-      {tabs.map((tab) => (
+      {tabs.map((id) => (
         <NavigationButton
-          key={tab.id}
-          text={tab.name}
-          selected={selectedId === tab.id}
-          navigate={() => setActiveId(tab.id)} 
+          key={id}
+          id={id}
+          selected={selectedId === id}
+          navigate={() => setActiveId(id)} 
         />
       ))}
     </nav>
