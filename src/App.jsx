@@ -36,10 +36,6 @@ export const App = () => {
                   index 
                   element={<Menu/>} 
                 />
-                <Route
-                  path="menu"
-                  element={<Menu/>}
-                />
                 <Route 
                   path="reviews"
                   element={<Reviews/>}
