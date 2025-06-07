@@ -5,6 +5,8 @@ import { store } from '@store/store';
 import { AuthContextProvider } from './context/Auth/AuthContextProvider';
 import { ThemeContextProvider } from './context/Theme/ThemeContextProvider';
 import { BrowserRouter, Route, Routes } from 'react-router';
+import { RestaurantsPage } from './pages/Restaurants/RestaurantsPage';
+import { Restaurant } from '@components/Restaurant/Restaurant';
 
 export const App = () => {
   return (
@@ -14,7 +16,20 @@ export const App = () => {
           <BrowserRouter>
           <Layout>
             <Routes>
-              <Route path='/' element={<HomePage/>}/>
+              <Route 
+                path='/' 
+                element={<HomePage/>}
+              />
+
+              <Route 
+                path='/restaurants' 
+                element={<RestaurantsPage/>}
+              >
+                <Route 
+                  path=':restaurantId' 
+                  element={<Restaurant/>}
+                ></Route>
+              </Route>
             </Routes>
           </Layout>
           </BrowserRouter>

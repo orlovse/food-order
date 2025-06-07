@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 import { Menu } from '@components/MenuItem/Menu';
 import { ReviewForm } from '@components/Reviews/ReviewForm';
@@ -7,10 +8,11 @@ import { AuthContext } from '../../context/Auth';
 import { selectRestaurantById } from '@store/Restaurants/restaurantsSlice';
 import styles from './Restaurant.module.css';
 
-export const Restaurant = ({ id }) => {
+export const Restaurant = () => {
   const { isAuthorized } = useContext(AuthContext);
   
-  const { name, menu, reviews } = useSelector((state) => selectRestaurantById(state, id));
+  const { restaurantId } = useParams();
+  const { name, menu, reviews } = useSelector((state) => selectRestaurantById(state, restaurantId));
 
   return (
     <div className={styles.container}>
@@ -27,7 +29,6 @@ export const Restaurant = ({ id }) => {
           <ReviewForm/>
         </div>
       )}
-
      </div>
   );
 };
