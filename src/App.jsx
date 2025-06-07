@@ -10,6 +10,7 @@ import { Restaurant } from '@components/Restaurant/Restaurant';
 import { CartPage } from './pages/CartPage/CartPage';
 import { Menu } from '@components/MenuItem/Menu';
 import { Reviews } from '@components/Reviews/Reviews';
+import { DishPage } from './pages/DishPage/DishPage';
 
 export const App = () => {
   return (
@@ -46,6 +47,11 @@ export const App = () => {
               <Route 
                 path="/cart"
                 element={<CartPage/>}
+              />
+
+              <Route 
+                path="/dish/:dishId"
+                element={<DishPage/>}
               />
             </Routes>
           </Layout>

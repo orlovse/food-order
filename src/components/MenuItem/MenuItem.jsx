@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { useContext } from 'react';
 import { useSelector } from 'react-redux';
 import { Counter } from '@components/Counter/Counter';
@@ -13,7 +14,7 @@ export const MenuItem = ({ id }) => {
 
   return (
     <div className={styles.container}>
-      <span>{name}</span>
+      <Link to={`/dish/${id}`}>{name}</Link>
 
       {isAuthorized && (
         <Counter 

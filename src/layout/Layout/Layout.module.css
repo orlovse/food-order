@@ -22,4 +22,5 @@
   grid-area: main;
   overflow: auto;
   padding: 12px;
+  justify-items: center;
 }

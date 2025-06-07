@@ -5,7 +5,7 @@ export const HomePage = () => {
     <div>
       <h3>Home Page</h3>
 
-      <Link to="restaurants">Go to restaurants Page</Link>
+      <Link to="restaurants">Go to restaurants</Link>
     </div>
   );
 };
