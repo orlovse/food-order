@@ -6,7 +6,7 @@
   padding: 24px;
 }
 
-.button.active::after {
+.link.selected::after {
   content: '';
   position: absolute;
   bottom: -4px;

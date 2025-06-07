@@ -1,33 +1,32 @@
-import { useContext } from 'react';
+import { NavLink, Outlet, useParams } from 'react-router';
 import { useSelector } from 'react-redux';
-import { Menu } from '@components/MenuItem/Menu';
-import { ReviewForm } from '@components/Reviews/ReviewForm';
-import { Reviews } from '@components/Reviews/Reviews';
-import { AuthContext } from '../../context/Auth';
 import { selectRestaurantById } from '@store/Restaurants/restaurantsSlice';
+import { Cart } from '@components/Cart/Cart';
 import styles from './Restaurant.module.css';
+import { TabNavigation } from '../../layout/TabNavigation/TabNavigation';
 
-export const Restaurant = ({ id }) => {
-  const { isAuthorized } = useContext(AuthContext);
-  
-  const { name, menu, reviews } = useSelector((state) => selectRestaurantById(state, id));
+export const Restaurant = () => {
+  const { restaurantId } = useParams();
+  const { name, reviews } = useSelector((state) => selectRestaurantById(state, restaurantId));
+  const tabs = [
+    { id: 1, path: '.', label: 'Menu' }
+  ];
+
+  if (reviews.length) {
+    tabs.push({ id: 2, path: 'reviews', label: 'Reviews' });
+  }
 
   return (
-    <div className={styles.container}>
-      <h2>{name}</h2>
+    <>
+      <div className={styles.container}>
+        <h2>{name}</h2>
 
-      <Menu menu={menu}/>
+        <TabNavigation tabs={tabs}/>
 
-      {reviews.length ? <Reviews reviews={reviews} /> : null }
-
-      {isAuthorized && (
-        <div>
-          <h3>Your review</h3>
-          
-          <ReviewForm/>
-        </div>
-      )}
-
+        <Outlet/>
      </div>
+
+     <Cart/>
+    </>
   );
 };

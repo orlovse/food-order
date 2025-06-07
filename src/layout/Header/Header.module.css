@@ -13,3 +13,13 @@
   display: flex;
   gap: var(--spacing);
 }
+
+.link {
+  border: 1px solid transparent;
+  padding: 8px;
+  border-radius: var(--radius);
+}
+
+.link.selected {
+  border-color: var(--color-primary-end);;
+}

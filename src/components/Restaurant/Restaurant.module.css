@@ -4,16 +4,13 @@
   gap: 24px;
   padding: 24px;
   max-width: 800px;
-  min-width: 400px;
+  min-width: 600px;
   align-self: center;
   background: #ecd2ff17;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
-  min-width: 600px;
 }
-
-
 
 .review {
   margin-top: var(--spacing);

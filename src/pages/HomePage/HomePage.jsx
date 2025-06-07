@@ -1,21 +1,11 @@
-import { Restaurant } from '@components/Restaurant/Restaurant';
-import { useRestaurants } from '@hooks/useRestaurants';
-import { TabNavigation } from '@components/TabNavigation/TabNavigation';
-import styles from './HomePage.module.css';
+import { Link } from 'react-router';
 
 export const HomePage = () => {
-  const { restaurantsIds, selectedRestaurantId, setSelectedRestaurantId } =
-    useRestaurants();
-
   return (
-    <div className={styles.container}>
-      <TabNavigation
-        tabs={restaurantsIds}
-        selectedId={selectedRestaurantId}
-        setActiveId={setSelectedRestaurantId}
-      />
+    <div>
+      <h3>Home Page</h3>
 
-      <Restaurant id={selectedRestaurantId} />
+      <Link to="restaurants">Go to restaurants</Link>
     </div>
   );
 };
