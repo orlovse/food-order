@@ -10,3 +10,9 @@
   max-width: 800px;
   min-width: 600px;
 }
+
+.clear {
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-primary-end);
+}
