@@ -7,6 +7,7 @@ import { Reviews } from '@components/Reviews/Reviews';
 import { AuthContext } from '../../context/Auth';
 import { selectRestaurantById } from '@store/Restaurants/restaurantsSlice';
 import styles from './Restaurant.module.css';
+import { Cart } from '@components/Cart/Cart';
 
 export const Restaurant = () => {
   const { isAuthorized } = useContext(AuthContext);
@@ -15,20 +16,24 @@ export const Restaurant = () => {
   const { name, menu, reviews } = useSelector((state) => selectRestaurantById(state, restaurantId));
 
   return (
-    <div className={styles.container}>
-      <h2>{name}</h2>
+    <>
+      <div className={styles.container}>
+        <h2>{name}</h2>
 
-      <Menu menu={menu}/>
+        <Menu menu={menu}/>
 
-      {reviews.length ? <Reviews reviews={reviews} /> : null }
+        {reviews.length ? <Reviews reviews={reviews} /> : null }
 
-      {isAuthorized && (
-        <div>
-          <h3>Your review</h3>
-          
-          <ReviewForm/>
-        </div>
-      )}
+        {isAuthorized && (
+          <div>
+            <h3>Your review</h3>
+            
+            <ReviewForm/>
+          </div>
+        )}
      </div>
+
+     <Cart/>
+    </>
   );
 };

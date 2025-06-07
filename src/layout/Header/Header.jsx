@@ -6,8 +6,9 @@ import styles from './Header.module.css';
 
 export const Header = () => {
   const navLinks = [
-    { id: 1, text: 'Home', link: '/'},
-    { id: 2, text: 'Restaurants', link: '/restaurants'},
+    { id: 1, text: 'Home', link: '/' },
+    { id: 2, text: 'Restaurants', link: '/restaurants' },
+    { id: 3, text: 'Cart', link: '/cart' }
   ];
 
     const getLinkClass = ({ isActive }) => {

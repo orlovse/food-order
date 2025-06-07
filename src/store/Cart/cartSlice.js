@@ -24,9 +24,10 @@ export const cartSlice = createSlice({
   },
   selectors: {
     selectCartItems: (state) => state,
+    selectsTotalItems: (state) => Object.keys(state).length,
     selectCountById: (state, id) => state[id] || 0
   }
 });
 
 export const { addItem, removeItem, clear } = cartSlice.actions;
-export const { selectCountById, selectCartItems } = cartSlice.selectors;
+export const { selectCountById, selectsTotalItems, selectCartItems } = cartSlice.selectors;
