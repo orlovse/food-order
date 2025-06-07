@@ -20,35 +20,35 @@ export const App = () => {
           <Layout>
             <Routes>
               <Route 
-                path='/' 
+                path="/"
                 element={<HomePage/>}
               />
 
               <Route 
-                path='/restaurants' 
+                path="/restaurants"
                 element={<RestaurantsPage/>}
               >
                 <Route 
-                  path=':restaurantId' 
+                  path=":restaurantId"
                   element={<Restaurant/>}
                 >
                 <Route
                   index 
-                  element={<Menu />} 
+                  element={<Menu/>} 
                 />
                 <Route
-                  path='menu' 
+                  path="menu"
                   element={<Menu/>}
                 />
                 <Route 
-                  path='reviews' 
+                  path="reviews"
                   element={<Reviews/>}
                 />
                 </Route>
               </Route>
 
               <Route 
-                path='/cart' 
+                path="/cart"
                 element={<CartPage/>}
               />
             </Routes>
