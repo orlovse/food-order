@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/Auth';
 import styles from './MenuItem.module.css';
 
 export const MenuItem = ({ id }) => {
-  const { count, setCount } = useCounter();
+  const { count, setCount } = useCounter(id);
   const { isAuthorized } = useContext(AuthContext);
   const { name } = useSelector((state) => selectDishById(state, id));
 

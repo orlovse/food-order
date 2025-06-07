@@ -1,14 +1,24 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem, removeItem, selectCountById } from '@store/Cart/cartSlice';
 
-export const useCounter = (initialValue = 0, min = 0, max = 20) => {
-  const [count, setCount] = useState(initialValue);
+export const useCounter = (id) => {
+  const count = useSelector((state) => selectCountById(state, id));
 
-  const changeCount = (count) => {
-    setCount(Math.max(min, Math.min(max, count)));
+  const dispatch = useDispatch();
+
+  const setCount = (count) => {
+    if (count > 0)
+    {
+      dispatch(addItem(id));
+    }
+    else
+    {
+      dispatch(removeItem(id));
+    }
   };
 
   return {
     count,
-    setCount: changeCount
+    setCount
   };
 };
