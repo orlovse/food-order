@@ -1,11 +1,11 @@
-import { NavigationButton } from './NavigationButton';
+import { RestaurantTabButton } from './RestaurantTabButton';
 import styles from './TabNavigation.module.css';
 
 export const TabNavigation = ({ tabs = [], selectedId, setActiveId }) => {
   return (
     <nav className={styles.container}>
       {tabs.map((id) => (
-        <NavigationButton
+        <RestaurantTabButton
           key={id}
           id={id}
           selected={selectedId === id}

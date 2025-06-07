@@ -1,6 +1,6 @@
 import { Restaurant } from '@components/Restaurant/Restaurant';
 import { useRestaurants } from '@hooks/useRestaurants';
-import { TabNavigation } from '@layout/TabNavigation/TabNavigation';
+import { TabNavigation } from '@components/TabNavigation/TabNavigation';
 import styles from './HomePage.module.css';
 
 export const HomePage = () => {
