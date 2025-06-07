@@ -1,21 +1,21 @@
 import { Restaurant } from '@components/Restaurant/Restaurant';
 import { useRestaurants } from '@hooks/useRestaurants';
-import { TabNavigation } from '@layout/TabNavigation/TabNavigation';
+import { TabNavigation } from '@components/TabNavigation/TabNavigation';
 import styles from './HomePage.module.css';
 
 export const HomePage = () => {
-  const { restaurants, selectedRestaurant, setSelectedRestaurantId } =
+  const { restaurantsIds, selectedRestaurantId, setSelectedRestaurantId } =
     useRestaurants();
 
   return (
     <div className={styles.container}>
       <TabNavigation
-        tabs={restaurants}
-        selectedId={selectedRestaurant.id}
+        tabs={restaurantsIds}
+        selectedId={selectedRestaurantId}
         setActiveId={setSelectedRestaurantId}
       />
 
-      <Restaurant restaurant={selectedRestaurant} />
+      <Restaurant id={selectedRestaurantId} />
     </div>
   );
 };

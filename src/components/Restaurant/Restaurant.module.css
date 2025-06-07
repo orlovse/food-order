@@ -13,11 +13,7 @@
   min-width: 600px;
 }
 
-.menu {
-  padding: var(--spacing);
-  border-radius: var(--radius);
-  border: 1px solid var(--color-primary-end)
-}
+
 
 .review {
   margin-top: var(--spacing);

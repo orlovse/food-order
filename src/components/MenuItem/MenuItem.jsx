@@ -1,12 +1,15 @@
+import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import { Counter } from '@components/Counter/Counter';
 import { useCounter } from '@hooks/useCounter';
-import styles from './MenuItem.module.css';
-import { useContext } from 'react';
+import { selectDishById } from '@store/Dishes/dishesSlice';
 import { AuthContext } from '../../context/Auth';
+import styles from './MenuItem.module.css';
 
-export const MenuItem = ({ name }) => {
+export const MenuItem = ({ id }) => {
   const { count, setCount } = useCounter();
   const { isAuthorized } = useContext(AuthContext);
+  const { name } = useSelector((state) => selectDishById(state, id));
 
   return (
     <div className={styles.container}>
